@@ -8,7 +8,7 @@ const Image = ({ src, alt }: ImageType) => {
     <div className="w-full h-40 overflow-hidden">
       <div className="w-full h-full">
         <img
-          className="w-full rounded-md h-full object-cover object-center"
+          className="w-full h-full object-cover object-center"
           src={src}
           alt={alt}
         />
