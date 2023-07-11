@@ -1,0 +1,26 @@
+.g-primary {
+    background: linear-gradient(0deg, rgb(100, 154, 255) 0%, rgb(0, 12, 245) 100%);
+}
+.g-primary:hover {
+    background: linear-gradient(0deg, rgb(0, 12, 245) 0%,rgb(100, 154, 255) 100%);
+}
+.g-success {
+    background: linear-gradient(0deg, rgb(16, 192, 0) 0%, rgb(0, 90, 5) 100%);
+}
+.g-success:hover {
+    background: linear-gradient(0deg, rgb(0, 90, 5) 0%, rgb(16, 192, 0) 100%);
+}
+.g-error{
+    background: linear-gradient(0deg, rgb(255, 0, 0) 0%, rgb(134, 0, 0) 100%);
+}
+
+.g-error:hover{
+    background: linear-gradient(0deg, rgb(134, 0, 0) 0%, rgb(255, 0, 0) 100%);
+}
+
+.g-neutral{
+    background: linear-gradient(0deg, rgb(70, 70, 70) 0%, rgb(0, 0, 0) 100%);
+}
+.g-neutral:hover{
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(70, 70, 70) 100%);
+}

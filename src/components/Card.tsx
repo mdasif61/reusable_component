@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 type CardType = {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode,
+  className?: string
 };
 
 const Card = ({ children, className }: CardType) => {

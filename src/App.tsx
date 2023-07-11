@@ -64,24 +64,6 @@ const App: React.FC = () => {
         Submit
       </Button>
 
-      <Card>
-        <Image src={CardImage} alt="image not found" />
-        <MainBody>
-          <Title>Join Our Services</Title>
-          <CardBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            dolore dignissimos sed blanditiis consequuntur ab omnis iusto? Iusto
-            debitis
-          </CardBody>
-          <CardFooter>
-            <Button color="success" className="ml-0">
-              Buy Now
-            </Button>
-            <Badge>Category</Badge>
-          </CardFooter>
-        </MainBody>
-      </Card>
-
       <div className="grid grid-cols-5 gap-7">
         {data?.map((item) => (
           <Card className="w-auto">
