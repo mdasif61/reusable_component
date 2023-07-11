@@ -8,6 +8,7 @@ import {
 import Main from './Layout/Main.tsx';
 import Home from './Home/Home.tsx';
 import ButtonPage from './pages/ButtonPage.tsx';
+import TablePage from './pages/TablePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:'/button',
         element:<ButtonPage></ButtonPage>
+      },
+      {
+        path:'/table',
+        element:<TablePage></TablePage>
       }
     ]
   }

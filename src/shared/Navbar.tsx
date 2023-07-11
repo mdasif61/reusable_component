@@ -7,6 +7,7 @@ const Navbar = () => {
             <ul className="flex">
                 <li className="mx-4 font-semibold"><Link to='/'>Home</Link></li>
                 <li className="mx-4 font-semibold"><Link to='/button'>Button</Link></li>
+                <li className="mx-4 font-semibold"><Link to='/table'>Table</Link></li>
             </ul>
         </div>
     );

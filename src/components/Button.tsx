@@ -2,7 +2,7 @@ import { MouseEventHandler, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import '../Css/Button.css'
 
-type ButtonType = {
+type ButtonType =React.ButtonHTMLAttributes<HTMLButtonElement>&{
   children: ReactNode;
   color?: "success" | "primary" | "error" | "neutral";
   variant?: "outlined";
@@ -19,7 +19,8 @@ const Button = ({
   variant,
   radius = "r-md",
   onClick,
-  gradient
+  gradient,
+  ...rest
 }: ButtonType) => {
 
   const colors = {
@@ -71,6 +72,7 @@ const Button = ({
 
   return (
     <button
+      {...rest}
       onClick={handleSend}
       className={twMerge(
         colors[color],
