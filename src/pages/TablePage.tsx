@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import Table from "../components/Table/Table";
 import {useEffect, useState} from 'react'
 
@@ -16,10 +17,24 @@ const TablePage = () => {
         .then((data:Post[])=>setData(data))
     },[])
 
+    const handleClick=(data:unknown)=>{
+      console.log(data)
+    }
+
     const columns=[
       {label:'ID', value:'id'},
       {label:'Title', value:'title'},
       {label:'Body', value:'body'},
+      {
+        label:'Action',
+        content:(item:unknown)=>{
+          return(
+            <>
+              <Button onClick={()=>handleClick(item)}>Edit</Button>
+            </>
+          )
+        }
+      }
     ]
 
   return (

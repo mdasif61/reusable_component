@@ -1,0 +1,18 @@
+.design div:nth-child(even){
+    transition: all;
+    animation: loading 1s ease-in-out 0.5s infinite alternate forwards;
+}
+.design div:nth-child(odd){
+    transition: all;
+    animation: loading 1s ease-in-out 1s infinite alternate forwards;
+}
+
+@keyframes loading {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}

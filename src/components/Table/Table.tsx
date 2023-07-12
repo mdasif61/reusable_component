@@ -2,12 +2,13 @@ import { twMerge } from "tailwind-merge";
 import './Table.css'
 
 type TableType= React.TableHTMLAttributes<HTMLTableElement>&{
-    data:Array<unknown>;
+    data:Array<unknown>,
     columns:{
-        label:string;
-        value:string;
-    }[];
-    headRowClsss:string;
+        label:string,
+        value:string,
+        content?:(item:unknown)=>React.ReactNode
+    }[],
+    headRowClsss:string,
     bodyRowClsss:string;
  }
 
@@ -23,11 +24,11 @@ const Table = ({data,columns,headRowClsss, bodyRowClsss, ...rest}:TableType) => 
                 </tr>
             </thead>
             <tbody>
-                {data.map((item)=>(
-                    <tr className={twMerge('hover:bg-gray-200 border-b')}>
+                {data.map((item,i)=>(
+                    <tr key={i} className={twMerge('hover:bg-gray-200 border-b')}>
                         {
-                            columns.map((column)=>(
-                                <td className={twMerge('px-4 py-3',bodyRowClsss)}>{item[column.value]}</td>
+                            columns.map((column,i)=>(
+                                <td key={i} className={twMerge('px-4 py-3',bodyRowClsss)}>{column.content?column.content(item):item[column.value]}</td>
                             ))
                         }
                     </tr>
