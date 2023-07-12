@@ -9,18 +9,22 @@ interface Post{
 
 const TablePage = () => {
 
-    const [data,setData]=useState<Post[]| []>([])
+    const [data,setData]=useState<Post[] | []>([])
     useEffect(()=>{
        void fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res=>res.json())
         .then((data:Post[])=>setData(data))
     },[])
 
+    const columns=[
+      {label:'ID', value:'id'},
+      {label:'Title', value:'title'},
+      {label:'Body', value:'body'},
+    ]
+
   return (
     <div>
-      <Table data={data}>
-        fdf
-      </Table>
+      <Table data={data} columns={columns}></Table>
     </div>
   );
 };

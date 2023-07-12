@@ -1,21 +1,37 @@
-import {ReactNode} from 'react'
+import { twMerge } from "tailwind-merge";
+import './Table.css'
 
-type TableType={
-    children:ReactNode,
-}
+type TableType= React.TableHTMLAttributes<HTMLTableElement>&{
+    data:Array<unknown>;
+    columns:{
+        label:string;
+        value:string;
+    }[];
+    headRowClsss:string;
+    bodyRowClsss:string;
+ }
 
-const Table = ({children}:TableType) => {
+const Table = ({data,columns,headRowClsss, bodyRowClsss, ...rest}:TableType) => {
+
     return (
-        <table>
+        <table className={twMerge('border-2 border-gray-800 rounded-2xl overflow-hidden')} {...rest}>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Body</th>
+                    {columns.map((column,i)=>(
+                        <td className={twMerge('px-3 py-4 font-semibold bg-gray-800 text-gray-300', headRowClsss)} key={i}>{column.label}</td>
+                    ))}
                 </tr>
             </thead>
             <tbody>
-                
+                {data.map((item)=>(
+                    <tr className={twMerge('hover:bg-gray-200 border-b')}>
+                        {
+                            columns.map((column)=>(
+                                <td className={twMerge('px-4 py-3',bodyRowClsss)}>{item[column.value]}</td>
+                            ))
+                        }
+                    </tr>
+                ))}
             </tbody>
         </table>
     );
