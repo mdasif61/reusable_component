@@ -1,14 +1,17 @@
+import { twMerge } from "tailwind-merge";
+
 type ImageType = {
   src: string;
   alt?: string;
+  className?:string
 };
 
-const Image = ({ src, alt }: ImageType) => {
+const Image = ({ src, alt, className }: ImageType) => {
   return (
-    <div className="w-full h-40 overflow-hidden">
-      <div className="w-full h-full">
+    <div className={twMerge('w-full h-auto overflow-hidden',className)}>
+      <div className={twMerge("w-full h-full")}>
         <img
-          className="w-full h-full object-cover object-center"
+          className={twMerge('w-full h-full object-cover object-center')}
           src={src}
           alt={alt}
         />
