@@ -11,6 +11,8 @@ import ButtonPage from './pages/ButtonPage.tsx';
 import TablePage from './pages/TablePage.tsx';
 import LoadingPage from './pages/LoadingPage.tsx';
 import ModalPage from './pages/ModalPage.tsx';
+import LoginPage from './pages/LoginPage.tsx';
+import InputPage from './pages/InputPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path:'/modal',
         element:<ModalPage></ModalPage>
+      },
+      {
+        path:'/login',
+        element:<LoginPage></LoginPage>
+      },
+      {
+        path:'/input',
+        element:<InputPage></InputPage>
       }
     ]
   }

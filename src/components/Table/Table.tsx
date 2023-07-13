@@ -5,11 +5,11 @@ type TableType= React.TableHTMLAttributes<HTMLTableElement>&{
     data:Array<unknown>,
     columns:{
         label:string,
-        value:string,
-        content?:(item:unknown)=>React.ReactNode
+        value?:string,
+        content?:(item:unknown)=>JSX.Element
     }[],
-    headRowClsss:string,
-    bodyRowClsss:string;
+    headRowClsss?:string,
+    bodyRowClsss?:string;
  }
 
 const Table = ({data,columns,headRowClsss, bodyRowClsss, ...rest}:TableType) => {

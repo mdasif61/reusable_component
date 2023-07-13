@@ -7,6 +7,8 @@ import Image from '../components/Image';
 const ModalPage = () => {
     const [open, setOpen] = useState(false)
 
+    
+
     return (
         <div>
             <Button onClick={() => setOpen(true)} color="neutral" gradient="g-neutral">Open Modal</Button>

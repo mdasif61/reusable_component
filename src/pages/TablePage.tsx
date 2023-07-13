@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import Table from "../components/Table/Table";
-import {useEffect, useState} from 'react'
+import {ReactNode, useEffect, useState} from 'react'
 
 interface Post{
     id:number,
@@ -21,7 +21,7 @@ const TablePage = () => {
       console.log(data)
     }
 
-    const columns=[
+    const columns:{label:string,value?:string,content?:(item:unknown)=>JSX.Element}[]=[
       {label:'ID', value:'id'},
       {label:'Title', value:'title'},
       {label:'Body', value:'body'},

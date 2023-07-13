@@ -10,6 +10,8 @@ const Navbar = () => {
                 <li className="mx-4 font-semibold"><Link to='/table'>Table</Link></li>
                 <li className="mx-4 font-semibold"><Link to='/loading'>Loading</Link></li>
                 <li className="mx-4 font-semibold"><Link to='/modal'>Modal</Link></li>
+                <li className="mx-4 font-semibold"><Link to='/login'>Login</Link></li>
+                <li className="mx-4 font-semibold"><Link to='/input'>Input</Link></li>
             </ul>
         </div>
     );
