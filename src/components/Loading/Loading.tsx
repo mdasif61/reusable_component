@@ -2,10 +2,10 @@ import {ReactNode} from 'react'
 import { twMerge } from 'tailwind-merge';
 import '../../components/Loading/Loading.css'
 
-type LoadingType=React.StyleHTMLAttributes<HTMLStyleElement>&{
+type LoadingType={
     children:ReactNode;
-    fill:'fill-success'| 'fill-primary'|'fill-error'|'fill-neutral',
-    outline:'outline-success'|'outline-primary'|'outline-error'| 'outline-neutral',
+    fill?:'fill-success'| 'fill-primary'|'fill-error'|'fill-neutral',
+    outline?:'outline-success'|'outline-primary'|'outline-error'| 'outline-neutral',
 }
 
 const Loading = ({ children,fill, outline='outline-success' }:LoadingType) => {
@@ -27,17 +27,20 @@ const Loading = ({ children,fill, outline='outline-success' }:LoadingType) => {
   return (
     <div className="flex flex-col items-center justify-center">
       
-      <div><h3 className={(twMerge('text-green-500 font-semibold'))}>{children}</h3></div>
+      <div>
+        <h3 className={(twMerge('text-blue-500 font-semibold'))}>{children}</h3>
+      </div>
 
       <div className="my-2 flex design">
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
-        <div className={twMerge(colors[fill], !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
+        <div className={twMerge(fill? colors[fill]:'', !fill?outlined[outline]:'')}></div>
       </div>
+
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Home from './Home/Home.tsx';
 import ButtonPage from './pages/ButtonPage.tsx';
 import TablePage from './pages/TablePage.tsx';
 import LoadingPage from './pages/LoadingPage.tsx';
+import ModalPage from './pages/ModalPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path:'/loading',
         element:<LoadingPage></LoadingPage>
+      },
+      {
+        path:'/modal',
+        element:<ModalPage></ModalPage>
       }
     ]
   }

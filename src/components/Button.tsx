@@ -61,7 +61,7 @@ const Button = ({
     "r-md": "rounded-md",
     "r-lg": "rounded-lg",
     "r-none": "rounded-none",
-    "r-full": "rounded-full",
+    "r-full": "btn-circle",
   };
 
   const handleSend: MouseEventHandler<HTMLButtonElement> = (event) => {

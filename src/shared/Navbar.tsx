@@ -9,6 +9,7 @@ const Navbar = () => {
                 <li className="mx-4 font-semibold"><Link to='/button'>Button</Link></li>
                 <li className="mx-4 font-semibold"><Link to='/table'>Table</Link></li>
                 <li className="mx-4 font-semibold"><Link to='/loading'>Loading</Link></li>
+                <li className="mx-4 font-semibold"><Link to='/modal'>Modal</Link></li>
             </ul>
         </div>
     );
