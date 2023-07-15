@@ -12,7 +12,7 @@ const LoginPage = () => {
 
   return (
     <div className="flex items-center justify-center w-full h-[calc(100vh-108px)]">
-      <div className="bg-gradient-to-t from-black to-slate-700 w-5/12 mx-auto rounded-xl p-10 min-h-52">
+      <div className="bg-gradient-to-t from-black to-slate-700 w-full md:w-5/12 mx-auto rounded-xl p-10 min-h-52">
         <form className="w-full mx-auto">
           <div className="w-full">
             <Input type="email" labelStyle="text-white" placeholder="Email" label="Email" />
